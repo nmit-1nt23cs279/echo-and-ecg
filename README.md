@@ -421,7 +421,7 @@ Install the following tools:
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/nmit-1NT23CS278/Hridaya Medha-Multimodal-Cardiac-Assessment/tree/main
+(https://github.com/nmit-1nt23cs279/echo-and-ecg.git)
 ```
 
 ### Step 2: Navigate to the Project Directory
@@ -557,7 +557,7 @@ These results represent the individual model experiments and should not be inter
 |---:|---|---|
 | 1 | S Harshit Sai | 1NT23CS203 |
 | 2 | Y Bhavashya Chandra | 1NT23CS278 |
-| 3 | Y Himabindu | 1NT23CS279 |
+| 3 | Y Himabindhu | 1NT23CS279 |
 | 4 | Y Kushi Reddy | 1NT23CS277 |
 
 ## 17. References and Resources
