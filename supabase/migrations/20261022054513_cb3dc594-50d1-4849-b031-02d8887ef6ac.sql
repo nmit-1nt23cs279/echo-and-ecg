@@ -1,0 +1,26 @@
+create schema if not exists cardiofusion_private;
+revoke all on schema cardiofusion_private from public,anon;
+grant usage on schema cardiofusion_private to authenticated,service_role;
+alter function public.has_role(uuid,public.app_role) set schema cardiofusion_private;
+alter function public.has_patient_access(uuid,uuid) set schema cardiofusion_private;
+alter function public.has_patient_access_text(uuid,text) set schema cardiofusion_private;
+alter function public.grant_professional_access(text) set schema cardiofusion_private;
+alter function public.my_granted_patients() set schema cardiofusion_private;
+alter function public.my_access_grants() set schema cardiofusion_private;
+alter function public.review_professional_request(uuid,boolean,text) set schema cardiofusion_private;
+alter function public.admin_revoke_professional(uuid) set schema cardiofusion_private;
+alter function public.admin_stats() set schema cardiofusion_private;
+
+create function public.has_role(_user_id uuid,_role public.app_role) returns boolean language sql stable security invoker set search_path=public as $$ select cardiofusion_private.has_role(_user_id,_role) $$;
+create function public.has_patient_access(_professional uuid,_patient uuid) returns boolean language sql stable security invoker set search_path=public as $$ select cardiofusion_private.has_patient_access(_professional,_patient) $$;
+create function public.has_patient_access_text(_professional uuid,_patient text) returns boolean language sql stable security invoker set search_path=public as $$ select cardiofusion_private.has_patient_access_text(_professional,_patient) $$;
+create function public.grant_professional_access(_email text) returns uuid language sql security invoker set search_path=public as $$ select cardiofusion_private.grant_professional_access(_email) $$;
+create function public.my_granted_patients() returns table(patient_id uuid,full_name text,email text,granted_at timestamptz) language sql stable security invoker set search_path=public as $$ select * from cardiofusion_private.my_granted_patients() $$;
+create function public.my_access_grants() returns table(grant_id uuid,professional_id uuid,full_name text,email text,granted_at timestamptz) language sql stable security invoker set search_path=public as $$ select * from cardiofusion_private.my_access_grants() $$;
+create function public.review_professional_request(_request_id uuid,_approve boolean,_note text default null) returns void language sql security invoker set search_path=public as $$ select cardiofusion_private.review_professional_request(_request_id,_approve,_note) $$;
+create function public.admin_revoke_professional(_user_id uuid) returns void language sql security invoker set search_path=public as $$ select cardiofusion_private.admin_revoke_professional(_user_id) $$;
+create function public.admin_stats() returns json language sql stable security invoker set search_path=public as $$ select cardiofusion_private.admin_stats() $$;
+revoke all on all functions in schema cardiofusion_private from public,anon;
+revoke all on function public.has_role(uuid,public.app_role),public.has_patient_access(uuid,uuid),public.has_patient_access_text(uuid,text),public.grant_professional_access(text),public.my_granted_patients(),public.my_access_grants(),public.review_professional_request(uuid,boolean,text),public.admin_revoke_professional(uuid),public.admin_stats() from public,anon;
+grant execute on function public.has_role(uuid,public.app_role),public.has_patient_access(uuid,uuid),public.has_patient_access_text(uuid,text),public.grant_professional_access(text),public.my_granted_patients(),public.my_access_grants(),public.review_professional_request(uuid,boolean,text),public.admin_revoke_professional(uuid),public.admin_stats() to authenticated;
+grant execute on function public.has_role(uuid,public.app_role),public.has_patient_access(uuid,uuid),public.has_patient_access_text(uuid,text) to service_role;

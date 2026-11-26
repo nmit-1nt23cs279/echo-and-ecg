@@ -1,0 +1,2 @@
+alter table public.professional_reviews add column if not exists medication_recommendations text not null default '';
+alter table public.professional_reviews add constraint professional_reviews_medication_len check (length(medication_recommendations) <= 4000);
