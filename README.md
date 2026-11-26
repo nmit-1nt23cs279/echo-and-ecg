@@ -1,11 +1,11 @@
-# CardioFusion – Multimodal Cardiac Assessment Platform
+# Hridaya Medha – Multimodal Cardiac Assessment Platform
 
 <p align="center">
   <strong>An AI-powered web application for cardiac assessment using ECG and ECHO data</strong>
 </p>
 
 <p align="center">
-  <a href="https://cardiofusion.vercel.app">Live Demo</a> ·
+  <a href="https://Hridaya Medha.vercel.app">Live Demo</a> ·
   <a href="https://github.com/bhavashyacy2005-droid/github-ready-health-app">Source Code</a>
 </p>
 
@@ -21,7 +21,7 @@
 
 ## 1. Overview
 
-**CardioFusion** is a web-based multimodal cardiac assessment platform developed as a final-year B.Tech Computer Science and Engineering project.
+**Hridaya Medha** is a web-based multimodal cardiac assessment platform developed as a final-year B.Tech Computer Science and Engineering project.
 
 The platform explores the use of Artificial Intelligence (AI) and Deep Learning to process two different types of cardiac data:
 
@@ -30,7 +30,7 @@ The platform explores the use of Artificial Intelligence (AI) and Deep Learning 
 
 The project implements separate deep-learning pipelines for ECG and ECHO analysis and integrates feature-level fusion to combine the extracted representations into a unified feature vector.
 
-CardioFusion also provides a web interface for user authentication, data submission, assessment results, assessment history, PDF report generation, and professional review workflows.
+Hridaya Medha also provides a web interface for user authentication, data submission, assessment results, assessment history, PDF report generation, and professional review workflows.
 
 The application is designed as an academic prototype to demonstrate multimodal data processing, machine-learning integration, and full-stack web application development.
 
@@ -74,7 +74,7 @@ The proposed system combines modality-specific deep-learning models with a featu
 
 ## 5. System Architecture
 
-CardioFusion follows a modular architecture consisting of a presentation layer, application processing layer, machine-learning processing components, and backend data services.
+Hridaya Medha follows a modular architecture consisting of a presentation layer, application processing layer, machine-learning processing components, and backend data services.
 
 ### High-Level Architecture
 
@@ -85,7 +85,7 @@ CardioFusion follows a modular architecture consisting of a presentation layer, 
                   |
           React + TypeScript
                   |
-          CardioFusion Platform
+          Hridaya Medha Platform
                   |
        +----------+-----------+
        |                      |
@@ -311,7 +311,7 @@ ECHO Features (128)   |
 6. The resulting 192-dimensional vector is passed through the fusion network.
 7. The fusion workflow produces its output representation.
 
-The fusion component integrates information from both modalities and forms an important part of the CardioFusion architecture.
+The fusion component integrates information from both modalities and forms an important part of the Hridaya Medha architecture.
 
 ## 7. Technology Stack
 
@@ -358,7 +358,7 @@ Provides a dashboard for professional review, comments, and recommendations.
 
 ## 9. Database and Data Management
 
-CardioFusion uses Supabase as its backend service and PostgreSQL as its relational database.
+Hridaya Medha uses Supabase as its backend service and PostgreSQL as its relational database.
 
 The database layer supports user information, authentication-related application workflows, assessment records, and professional review information.
 
@@ -377,7 +377,7 @@ Row Level Security (RLS) is used to enforce access restrictions at the database 
 The repository contains the frontend application and supporting project resources.
 
 ```text
-CardioFusion/
+Hridaya Medha/
 │
 ├── public/
 │   └── models/
@@ -421,7 +421,7 @@ Install the following tools:
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/nmit-1NT23CS278/CardioFusion-Multimodal-Cardiac-Assessment/tree/main
+git clone https://github.com/nmit-1NT23CS278/Hridaya Medha-Multimodal-Cardiac-Assessment/tree/main
 ```
 
 ### Step 2: Navigate to the Project Directory
@@ -473,7 +473,7 @@ Use the production build output to verify that the frontend compiles successfull
 
 ## 12. Deployment
 
-The CardioFusion frontend is deployed using **Vercel**.
+The Hridaya Medha frontend is deployed using **Vercel**.
 
 ### Deployment Workflow
 
@@ -494,7 +494,7 @@ The CardioFusion frontend is deployed using **Vercel**.
 | Database | Supabase PostgreSQL | Stores application records |
 | Access Control | Supabase RLS | Enforces database access policies |
 
-**Live Application:** https://cardiofusion.vercel.app
+**Live Application:** https://Hridaya Medha.vercel.app
 
 ## 13. Testing and Validation
 
@@ -545,7 +545,7 @@ These results represent the individual model experiments and should not be inter
 
 ## 16. Project Team
 
-**Project Title:** CardioFusion – Multimodal Cardiac Assessment Platform
+**Project Title:** Hridaya Medha – Multimodal Cardiac Assessment Platform
 
 **Department:** Computer Science and Engineering
 
@@ -579,7 +579,7 @@ Dataset references and research papers used for model development should also be
 
 ## 18. Disclaimer
 
-CardioFusion is developed strictly for educational, academic, and research demonstration purposes. It is not intended to provide medical diagnosis, treatment recommendations, or emergency medical advice.
+Hridaya Medha is developed strictly for educational, academic, and research demonstration purposes. It is not intended to provide medical diagnosis, treatment recommendations, or emergency medical advice.
 
 The model outputs are experimental and must not be used for real-world clinical decision-making. Any actual medical concern should be evaluated by a qualified healthcare professional.
 
@@ -592,6 +592,6 @@ A license has not been specified. If the project is intended to be reused or dis
 ---
 
 <p align="center">
-  <strong>CardioFusion</strong><br>
+  <strong>Hridaya Medha</strong><br>
   Multimodal Intelligence for Cardiac Assessment
 </p>
